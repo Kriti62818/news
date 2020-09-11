@@ -1,0 +1,47 @@
+<aside>
+    <div id="sidebar" class="nav-collapse ">
+      <!-- sidebar menu start-->
+      <ul class="sidebar-menu" id="nav-accordion">
+        <p class="centered"><a href="profile.html"> <img class="user-avatar rounded-circle" src="https://tse3.mm.bing.net/th?id=OIP.4ClRk26n-zmaqAsPD13WdwHaHa&pid=Api&P=0&w=300&h=300" alt="User Avatar" style="width:60px;height:60px"></a></p>
+        <h5 class="centered">{{loggedInUser.name}}</h5>
+   
+        <li v-if="loggedInUser.role=='admin'">
+          <a href="/backend/roles">
+            <i class="fa fa-user"></i>
+            <span>Role </span>
+            </a>
+        </li>
+        <li>
+            <a href="/backend/users" v-if="loggedInUser.role=='admin'">
+              <i class="fa fa-users"></i>
+              <span>Users </span>
+              </a>
+          </li>
+          <li>
+            <a href="/backend/category" v-if="loggedInUser.role=='admin'">
+              <i class="fa fa-list-alt"></i>
+              <span>Category </span>
+              </a>
+          </li>
+          <li>
+            <a href="/backend/form">
+              <i class="fa fa-pencil"></i>
+              <span>Create Post </span>
+              </a>
+          </li>
+          <li>
+            <a href="/backend/posts">
+              <i class="fa fa-tasks"></i>
+              <span>Posts</span>
+              </a>
+          </li>
+          <li>
+            <a href="/backend/logout">
+              <i class="fa fa-sign-out"></i>
+              <span>Logout</span>
+              </a>
+          </li>
+      </ul>
+      <!-- sidebar menu end-->
+    </div>
+  </aside>

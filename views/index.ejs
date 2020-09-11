@@ -1,0 +1,502 @@
+
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>News</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/frontend/assets/img/favicon.ico">
+
+	<!-- CSS here -->
+	<link rel="stylesheet" href="/frontend/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/frontend/assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/frontend/assets/css/slicknav.css">
+    <link rel="stylesheet" href="/frontend/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/frontend/assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="/frontend/assets/css/gijgo.css">
+    <link rel="stylesheet" href="/frontend/assets/css/animate.min.css">
+    <link rel="stylesheet" href="/frontend/assets/css/animated-headline.css">
+	<link rel="stylesheet" href="/frontend/assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="/frontend/assets/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="/frontend/assets/css/themify-icons.css">
+	<link rel="stylesheet" href="/frontend/assets/css/slick.css">
+	<link rel="stylesheet" href="/frontend/assets/css/nice-select.css">
+	<link rel="stylesheet" href="/frontend/assets/css/style.css">
+</head>
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/frontend/assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- Preloader Start-->
+    
+    <%-include partials/frontendHeader.ejs%>
+
+
+    <main>
+        <!-- Banner News Area Start -->
+        <div class="banner-news">
+            <div class="container-fluid p-0">
+                <div class="banner-slider-active no-gutters ">
+                    <div class="single-sliders">
+                        <div class="single-baner-nw mb-30 text-center">
+                            <div class="banner-img-cap">
+                                <div class="banner-img">
+                                    <img src="/frontend/assets/img/gallery/banner-cap1.png" alt="">
+                                    
+                                    
+                                </div>
+                                <div class="banner-cap">
+                                    <%=p[0].writtenDate.toString().substring(4,15)%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"><%=p[0].writtenBy%></i>
+                                    <p><%=p[0].category.toUpperCase()%></p>
+                                    <h3><a href="/<%%=p[0].slug%>"><%=p[0].title%></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-sliders">
+                        <div class="single-baner-nw mb-30 text-center">
+                            <div class="banner-img-cap">
+                                <div class="banner-img">
+                                    <img src="/frontend/assets/img/gallery/banner-cap2.png" alt="">
+                                </div>
+                                <div class="banner-cap">
+                                    <%=p[1].writtenDate.toString().substring(4,15)%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"><%=p[1].writtenBy%></i>
+                                   
+                                  <p><%=p[1].category.toUpperCase()%></p>
+                                  <h3><a href="/<%=p[1].slug%>"><%=p[1].title%></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-sliders">
+                        <div class="single-baner-nw mb-30 text-center">
+                            <div class="banner-img-cap">
+                                <div class="banner-img">
+                                    <img src="/frontend/assets/img/gallery/banner-cap3.png" alt="">
+                                    <!--video iocn -->
+                                   
+                                </div>
+                                <div class="banner-cap">
+                                    <%=p[2].writtenDate.toString().substring(4,15)%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"><%=p[2].writtenBy%></i>
+                                   
+                                  <p><%=p[2].category.toUpperCase()%></p>
+                                  <h3><a href="/<%=p[2].slug%>"><%=p[2].title%></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-sliders">
+                        <div class="single-baner-nw mb-30 text-center">
+                            <div class="banner-img-cap">
+                                <div class="banner-img">
+                                    <img src="/frontend/assets/img/gallery/banner-cap4.png" alt="">
+                                </div>
+                                <div class="banner-cap">
+                                    <%=p[3].writtenDate.toString().substring(4,15)%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"><%=p[3].writtenBy%></i>
+                                   
+                                  <p><%=p[3].category.toUpperCase()%></p>
+                                  <h3><a href="/<%=p[3].slug%>"><%=p[3].title%></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-sliders">
+                        <div class="single-baner-nw mb-30 text-center">
+                            <div class="banner-img-cap">
+                                <div class="banner-img">
+                                    <img src="/frontend/assets/img/gallery/banner-cap2.png" alt="">
+                                    <!--video iocn -->
+                                    
+                                </div>
+                                <div class="banner-cap">
+                                     <%=p[4].writtenDate.toString().substring(4,15)%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"><%=p[4].writtenBy%></i>
+                                   
+                                  <p><%=p[4].category.toUpperCase()%></p>
+                                  <h3><a href="/<%=p[4].slug%>"><%=p[4].title%></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Banner News Area End -->
+        <!-- Latest Posts Area -->
+        <div class="latest-posts pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-tittle mb-35">
+                            <h2>Latest Posts</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="latest-slider">
+                            <div class="slider-active">
+                                <!-- Single slider -->
+                                <div class="single-slider">
+                                    <div class="trending-top mb-30">
+                                        <div class="trend-top-img text-center">
+                                            <img src="/frontend/assets/img/gallery/latest-post.png" alt="">
+                                            <div class="trend-top-cap">
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms"><%=posts[0].category.toUpperCase()%></span>
+                                                <h2><a href="/<%=posts[0].slug%>" data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms"><%=posts[0].title%></a></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single slider -->
+                                <div class="single-slider">
+                                    <div class="trending-top mb-30">
+                                        <div class="trend-top-img text-center">
+                                            <img src="/frontend/assets/img/gallery/latest-post.png" alt="">
+                                            <div class="trend-top-cap">
+                                                <span class="bgr" data-animation="fadeInUp" data-delay=".2s" data-duration="1000ms"><%=posts[1].category.toUpperCase()%></span>
+                                                <h2><a href="/<%=posts[1].slug%>"  data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms"><%=posts[1].title%></a></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- smoll items -->
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="single-baner-nw2 mb-30 ">
+                                    <div class="banner-img-cap2">
+                                        <div class="banner-img">
+                                            <img src="/frontend/assets/img/gallery/latest-post2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="single-baner-nw2 mb-30">
+                                    <div class="banner-img-cap2">
+                                        <div class="banner-cap2 banner-cap3">
+                                            <p><%=posts[2].category.toUpperCase()%></p>
+                                           <h3><a href="/<%=posts[2].slug%>"><%=posts[2].title%></a></h3>
+                                            <p class="normal"><%=posts[2].excerpt%></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="single-baner-nw2 mb-30">
+                                    <div class="banner-img-cap2">
+                                        <div class="banner-cap2 banner-cap3">
+                                            <p><%=posts[3].category.toUpperCase()%></p>
+                                            <h3><a href="/<%=posts[3].slug%>"><%=posts[3].title%></a></h3>
+                                            <p  class="normal"><%=posts[3].excerpt%></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="single-baner-nw2 mb-30 ">
+                                    <div class="banner-img-cap2">
+                                        <div class="banner-img">
+                                            <img src="/frontend/assets/img/gallery/latest-post02.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-baner-nw2 mb-30 text-center">
+                            <div class="banner-img-cap2">
+                                <div class="banner-img">
+                                    <img src="/frontend/assets/img/gallery/latest-post3.png" alt="">
+                                </div>
+                                <div class="banner-cap2">
+                                    <p><%=posts[4].category.toUpperCase()%></p>
+                                    <h3><a href="/<%=posts[4].slug%>"><%=posts[4].title%></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-baner-nw2 mb-30 text-center">
+                            <div class="banner-img-cap2">
+                                <div class="banner-img">
+                                    <img src="/frontend/assets/img/gallery/latest-post4.png" alt="">
+                                </div>
+                                <div class="banner-cap2">
+                                    <p><%=posts[5].category.toUpperCase()%></p>
+                                    <h3><a href="/<%=posts[5].slug%>"><%=posts[5].title%></a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Latest Posts End-->
+       
+        <!-- Nwes slider Start -->
+        <div class="nes-slider-area pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="news-slider-active">
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="/frontend/assets/img/gallery/news-slider1.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="/frontend/assets/img/gallery/news-slider2.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="/frontend/assets/img/gallery/news-slider3.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="/frontend/assets/img/gallery/news-slider4.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="/frontend/assets/img/gallery/news-slider1.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single-news-slider">
+                                <div class="news-img">
+                                    <a href="category.html"><img src="/frontend/assets/img/gallery/news-slider2.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nwes slider End -->
+        <!-- Top Posts Start -->
+        <div class="top-post-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-tittle mb-35">
+                            <h2>Top Posts</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-lg-between">
+                    <div class="col-lg-8 col-md-8">
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="#"><img src="/frontend/assets/img/gallery/top-psot1.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <span><%=p[5].category.toUpperCase()%></span>
+                                    <a href="/<%=p[5].slug%>"><h4><%=p[5].title%></h4></a>
+                                    <p><%=p[5].excerpt%></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="#"><img src="/frontend/assets/img/gallery/top-psot2.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <span><%=p[6].category.toUpperCase()%></span>
+                                    <a href="/<%=p[6].slug%>"><h4><%=p[6].title%></h4></a>
+                                    <p><%=p[6].excerpt%></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="#"><img src="/frontend/assets/img/gallery/top-psot3.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <span><%=p[7].category.toUpperCase()%></span>
+                                    <a href="/<%=p[7].slug%>"><h4><%=p[7].title%></h4></a>
+                                    <p><%=p[7].excerpt%></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="#"><img src="/frontend/assets/img/gallery/top-psot4.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <span><%=p[8].category.toUpperCase()%></span>
+                                    <a href="/<%=p[8].slug%>"><h4><%=p[8].title%></h4></a>
+                                    <p><%=p[8].excerpt%></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-job-content -->
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="#"><img src="/frontend/assets/img/gallery/top-psot5.png" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <span><%=p[9].category.toUpperCase()%></span>
+                                    <a href="/<%=p[9].slug%>"><h4><%=p[9].title%></h4></a>
+                                    <p><%=p[9].excerpt%></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                        <div class="google-add mb-40">
+                            <img src="/frontend/assets/img/gallery/Ad.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Posts End -->
+        <!-- Latest Posts Area -->
+        <div class="latest-posts pt-80 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-tittle mb-35">
+                            <h2>Latest Posts</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <div class="banner-img-cap2">
+                                <div class="banner-img">
+                                    <img src="/frontend/assets/img/gallery/trend1.png" alt="">
+                                </div>
+                                <div class="banner-cap2">
+                                    <p><%=posts[6].category.toUpperCase()%></p>
+                                   <h3><a href="/<%=posts[6].slug%>"><%=posts[6].title%></a></h3>
+                                    <p class="blog-text" style="text-transform: normal !important;"><%=posts[6].excerpt%></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <div class="banner-img-cap2">
+                                <div class="banner-img">
+                                    <img src="/frontend/assets/img/gallery/trend2.png" alt="">
+                                </div>
+                                <div class="banner-cap2">
+                                    <p><%=posts[7].category.toUpperCase()%></p>
+                                   <h3><a href="/<%=posts[7].slug%>"><%=posts[7].title%></a></h3>
+                                    <p class="blog-text" style="text-transform: normal !important;"><%=posts[7].excerpt%></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-baner-nw2 mb-30">
+                            <div class="banner-img-cap2">
+                                <div class="banner-img">
+                                    <img src="/frontend/assets/img/gallery/trend3.png" alt="">
+                                </div>
+                                <div class="banner-cap2">
+                                    <p><%=posts[8].category.toUpperCase()%></p>
+                                   <h3><a href="/<%=posts[8].slug%>"><%=posts[8].title%></a></h3>
+                                    <p class="blog-text" style="text-transform: normal !important;"><%=posts[8].excerpt%></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Latest Posts End-->
+        
+
+    </main>
+    
+    <%include partials/frontendFooter.ejs%>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+
+    <script src="/frontend/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="/frontend/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/frontend/assets/js/popper.min.js"></script>
+    <script src="/frontend/assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="/frontend/assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="/frontend/assets/js/owl.carousel.min.js"></script>
+    <script src="/frontend/assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="/frontend/assets/js/wow.min.js"></script>
+    <script src="/frontend/assets/js/animated.headline.js"></script>
+    <script src="/frontend/assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Date Picker -->
+    <script src="/frontend/assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="/frontend/assets/js/jquery.nice-select.min.js"></script>
+    <script src="/frontend/assets/js/jquery.sticky.js"></script>
+    <!-- Progress -->
+    <script src="/frontend/assets/js/jquery.barfiller.js"></script>
+    
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="/frontend/assets/js/jquery.counterup.min.js"></script>
+    <script src="/frontend/assets/js/waypoints.min.js"></script>
+    <script src="/frontend/assets/js/jquery.countdown.min.js"></script>
+    <script src="/frontend/assets/js/hover-direction-snake.min.js"></script>
+
+    <!-- contact js -->
+    <script src="/frontend/assets/js/contact.js"></script>
+    <script src="/frontend/assets/js/jquery.form.js"></script>
+    <script src="/frontend/assets/js/jquery.validate.min.js"></script>
+    <script src="/frontend/assets/js/mail-script.js"></script>
+    <script src="/frontend/assets/js/jquery.ajaxchimp.min.js"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="/frontend/assets/js/plugins.js"></script>
+    <script src="/frontend/assets/js/main.js"></script>
+    
+    </body>
+</html> 

@@ -1,0 +1,216 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Magazine News</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="shortcut icon" type="image/x-icon" href="/frontend/assets/img/favicon.ico">
+
+  <!-- CSS here -->
+   <link rel="stylesheet" href="/frontend/assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="/frontend/assets/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="/frontend/assets/css/slicknav.css">
+   <link rel="stylesheet" href="/frontend/assets/css/animate.min.css">
+   <link rel="stylesheet" href="/frontend/assets/css/hamburgers.min.css">
+   <link rel="stylesheet" href="/frontend/assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="/frontend/assets/css/fontawesome-all.min.css">
+   <link rel="stylesheet" href="/frontend/assets/css/themify-icons.css">
+   <link rel="stylesheet" href="/frontend/assets/css/slick.css">
+   <link rel="stylesheet" href="/frontend/assets/css/nice-select.css">
+   <link rel="stylesheet" href="/frontend/assets/css/style.css">
+</head>
+
+<body>
+   <!--? Preloader Start -->
+   <div id="preloader-active">
+      <div class="preloader d-flex align-items-center justify-content-center">
+          <div class="preloader-inner position-relative">
+              <div class="preloader-circle"></div>
+              <div class="preloader-img pere-text">
+                  <img src="/frontend/assets/img/logo/loder.png" alt="">
+              </div>
+          </div>
+      </div>
+   </div>
+   <!-- Preloader Start -->
+   <%include partials/frontendHeader.ejs%>
+   <main>
+        <!-- breadcrumb Start-->
+        <div class="page-notification">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-12">
+                     <nav aria-label="breadcrumb">
+                         <ol class="breadcrumb justify-content-center">
+                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                             <li class="breadcrumb-item"><a href="#">Blog Details</a></li> 
+                         </ol>
+                     </nav>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- breadcrumb End -->
+      <!--? Blog Area Start -->
+      <section class="blog_area single-post-area section-padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8 posts-list">
+                  <div class="single-post">
+                     <div class="feature-img">
+                        <img class="img-fluid" src="/frontend/assets/img/blog/single_blog_1.png" alt="">
+                     </div>
+                     <div class="blog_details">
+                        <h2 style="color: #2d2d2d;">
+                            <%=post.title%>
+                        </h2>
+                        <ul class="blog-info-link mt-3 mb-4">
+                           <li><a href="#"><i class="fa fa-user"></i> <%=post.writtenBy%></a></li>
+                           
+                        </ul>
+                        
+                        <p>
+                           MCSE boot camps have its supporters and its detractors. Some people do not understand why you
+                           should have to spend money on boot camp when you can get the MCSE study materials yourself at a
+                           fraction of the camp price. However, who has the willpower to actually sit through a
+                           self-imposed MCSE training. who has the willpower to actually
+                        </p>
+                        <%-post.description%>
+                     </div>
+                  </div>
+                  
+                 
+               </div>
+               <div class="col-lg-4">
+                  <div class="blog_right_sidebar">
+                    
+                    
+                     <aside class="single_sidebar_widget popular_post_widget">
+                        <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
+                        <div class="media post_item">
+                           <img src="/frontend/assets/img/post/post_1.png" alt="post">
+                           <div class="media-body">
+                              <a href="/<%=relatedPosts[0].slug%>">
+                                 <h3 style="color: #2d2d2d;"><%=relatedPosts[0].title%></h3>
+                              </a>
+                              <p><%=relatedPosts[0].writtenDate.toString().substring(0,15)%></p>
+                           </div>
+                        </div>
+                        <div class="media post_item">
+                           <img src="/frontend/assets/img/post/post_2.png" alt="post">
+                           <div class="media-body">
+                            <a href="/<%=relatedPosts[1].slug%>">
+                                <h3 style="color: #2d2d2d;"><%=relatedPosts[1].title%></h3>
+                             </a>
+                             <p><%=relatedPosts[1].writtenDate.toString().substring(0,15)%></p>
+                           </div>
+                        </div>
+                        <div class="media post_item">
+                           <img src="/frontend/assets/img/post/post_3.png" alt="post">
+                           <div class="media-body">
+                            <a href="/<%=relatedPosts[2].slug%>">
+                                <h3 style="color: #2d2d2d;"><%=relatedPosts[2].title%></h3>
+                             </a>
+                             <p><%=relatedPosts[2].writtenDate.toString().substring(0,15)%></p>
+                           </div>
+                        </div>
+                        <div class="media post_item">
+                           <img src="/frontend/assets/img/post/post_4.png" alt="post">
+                           <div class="media-body">
+                            <a href="/<%=relatedPosts[3].slug%>">
+                                <h3 style="color: #2d2d2d;"><%=relatedPosts[3].title%></h3>
+                             </a>
+                             <p><%=relatedPosts[3].writtenDate.toString().substring(0,15)%></p>
+                           </div>
+                        </div>
+                     </aside>
+                      <aside class="single_sidebar_widget post_category_widget">
+                        <h4 class="widget_title" style="color: #2d2d2d;">Category</h4>
+                        <ul class="list cat-list">
+                           <%categories.forEach(function(category){%>
+                              <li>
+                                 <a href="/category/<%=category.slug%>" class="d-flex">
+                                    <p><%=category.name%></p>
+                                   
+                                 </a>
+                              </li>
+                           <%})%>
+                           
+                           
+                        </ul>
+                     </aside>
+                     
+                     <aside class="single_sidebar_widget tag_cloud_widget">
+                        <h4 class="widget_title" style="color: #2d2d2d;">Tag Clouds</h4>
+                        <ul class="list">
+                           <%post.tags.forEach(function(tag){%>
+
+                         
+                           <li>
+                              <a href="/tag/<%=tag.slug%>"><%=tag.name.toUpperCase()%></a>
+                           </li>
+                           <%})%>
+                           
+                           
+                        </ul>
+                     </aside>
+                     
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Blog Area End -->
+   </main>
+   <%include partials/frontendFooter.ejs%>
+   <!-- Scroll Up -->
+   <div id="back-top" >
+         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+   </div>
+
+      <!-- JS here -->
+
+      <script src="/frontend/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+      <!-- Jquery, Popper, Bootstrap -->
+      <script src="/frontend/assets/js/vendor/jquery-1.12.4.min.js"></script>
+      <script src="/frontend/assets/js/popper.min.js"></script>
+      <script src="/frontend/assets/js/bootstrap.min.js"></script>
+      <!-- Jquery Mobile Menu -->
+      <script src="/frontend/assets/js/jquery.slicknav.min.js"></script>
+
+      <!-- Jquery Slick , Owl-Carousel Plugins -->
+      <script src="/frontend/assets/js/owl.carousel.min.js"></script>
+      <script src="/frontend/assets/js/slick.min.js"></script>
+      <!-- One Page, Animated-HeadLin -->
+      <script src="/frontend/assets/js/wow.min.js"></script>
+      <script src="/frontend/assets/js/animated.headline.js"></script>
+      <script src="/frontend/assets/js/jquery.magnific-popup.js"></script>
+
+      <!-- Date Picker -->
+      <script src="/frontend/assets/js/gijgo.min.js"></script>
+      <!-- Nice-select, sticky -->
+      <script src="/frontend/assets/js/jquery.nice-select.min.js"></script>
+      <script src="/frontend/assets/js/jquery.sticky.js"></script>
+      
+      <!-- counter , waypoint,Hover Direction -->
+      <script src="/frontend/assets/js/jquery.counterup.min.js"></script>
+      <script src="/frontend/assets/js/waypoints.min.js"></script>
+      <script src="/frontend/assets/js/jquery.countdown.min.js"></script>
+      <script src="/frontend/assets/js/hover-direction-snake.min.js"></script>
+
+      <!-- contact js -->
+      <script src="/frontend/assets/js/contact.js"></script>
+      <script src="/frontend/assets/js/jquery.form.js"></script>
+      <script src="/frontend/assets/js/jquery.validate.min.js"></script>
+      <script src="/frontend/assets/js/mail-script.js"></script>
+      <script src="/frontend/assets/js/jquery.ajaxchimp.min.js"></script>
+      
+      <!-- Jquery Plugins, main Jquery -->	
+      <script src="/frontend/assets/js/plugins.js"></script>
+      <script src="/frontend/assets/js/main.js"></script>
+      
+   </body>
+</html>

@@ -1,0 +1,32 @@
+<header class="header black-bg">
+    <div class="sidebar-toggle-box">
+      <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+    </div>
+    <!--logo start-->
+    <a href="index.html" class="logo"><b>DASH<span>IO</span></b></a>
+    <!--logo end-->
+    <div class="nav notify-row" id="top_menu">
+      <!--  notification start -->
+      <div class="alert alert-success" role="alert" id="alert" style="z-index:1;float:right;position:relative;margin-bottom:1px; height:5px;line-height:5px;" v-if="action=='add'">
+       Added successfully.
+        <button style="z-index:1;float:right;" @click="action=''"><i class="fa fa-times"></i></button>
+      </div>
+      <div class="alert alert-danger" role="alert" id="alert" style="z-index:1;float:right;position:relative;margin-bottom:1px; height:5px;line-height:5px;" v-if="action=='delete'">
+        Deleted successfully.
+        <button style="z-index:1;float:right;" @click="action=''"><i class="fa fa-times"></i></button>
+      </div>
+      <div class="alert alert-primary" role="alert" id="alert" style="z-index:1;float:right;position:relative;margin-bottom:1px; height:5px;line-height:5px;" v-if="action=='edit'">
+       Updated successfully.
+        <button style="z-index:1;float:right;" @click="action=''"><i class="fa fa-times"></i></button>
+      </div>
+      <!--  notification end -->
+    </div>
+    <div class="top-menu">
+     
+      <ul class="nav pull-right top-menu">
+        <li><a class="logout" href="/backend/logout">Logout</a></li>
+        
+      </ul>
+      
+    </div>
+  </header>
